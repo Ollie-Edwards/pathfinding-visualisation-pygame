@@ -3,12 +3,7 @@ A* pathfinding visualisation using pygame
 
 ### Prerequisites
 
-  ```sh
-  math
-  random
-  time
-  pygame
-  ```
+  ```math``` and ```pygame```
 ### Installation
 
 1. Clone the repo
