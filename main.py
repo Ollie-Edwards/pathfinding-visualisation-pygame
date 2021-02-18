@@ -1,9 +1,6 @@
 import math
-import random
-import time
 import sys
 
-import pyautogui
 import pygame
 from pygame.locals import *
 
