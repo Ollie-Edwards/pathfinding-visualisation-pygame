@@ -13,8 +13,6 @@ A* pathfinding visualisation using pygame
 2. Install PIP packages
    ```sh
     pip install math
-    pip install random
-    pip install time
     pip install pygame
    ```
  3. CD into the project file
