@@ -123,10 +123,10 @@ def showTextInNode(text, centrePixel):
 
 def make_grid():
 	grid = []
-	for i in range(NumberOfBoxesInRow):
+	for rowNum in range(NumberOfBoxesInRow):
 		grid.append([])
-		for j in range(NumberOfBoxesInRow):
-			node = Node(i, j)
+		for colNum in range(NumberOfBoxesInRow):
+			node = Node(rowNum, colNum)
 			grid[i].append(node)
 	return grid
 grid = make_grid()
