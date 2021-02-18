@@ -98,32 +98,14 @@ class Node(object):
         self.updateColor()
         rect = pygame.Rect(self.left, self.top, boxWidth, boxWidth) #Rect(left, top, width, height)
         pygame.draw.rect(WIN, self.color,rect) # surface, color, rectangle, width
-
-
+	
     def getGCost(self): # distance from start # could have made this recursive
         totalDistance=0
         horisontalDistance = abs(startNode.rowNumber - self.rowNumber)
         verticalDistance = abs(startNode.columnNumber - self.columnNumber)
         totalDistance += math.sqrt((horisontalDistance**2)+(verticalDistance**2))
         return totalDistance
-        '''
-        totalDistance = 0
-        parent = self.parent
 
-        if parent == None:
-            horisontalDistance = abs(startNode.rowNumber - self.rowNumber)
-            verticalDistance = abs(startNode.rowNumber - self.columnNumber)
-            totalDistance += math.sqrt((horisontalDistance**2)+(verticalDistance**2))
-
-        else:
-            while parent != None:
-                horisontalDistance = abs(parent.rowNumber - self.rowNumber)
-                verticalDistance = abs(parent.rowNumber - self.columnNumber)
-                totalDistance += math.sqrt((horisontalDistance**2)+(verticalDistance**2))
-                parent = parent.parent
-
-        return totalDistance
-        '''
     def getHCost(self): # distance from end
         horisontalDistance = abs((endNode.rowNumber) - int(self.rowNumber))
         verticalDistance = abs((endNode.columnNumber) - int(self.columnNumber))
@@ -330,5 +312,5 @@ while run:
                     clickedNode.isEmpty = True
 
     drawNodeSquares()
-    clock.tick(30)
+    clock.tick(FPS)
     pygame.display.update()
