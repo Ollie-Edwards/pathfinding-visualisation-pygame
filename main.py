@@ -1,6 +1,7 @@
 import math
 import random
 import time
+import sys
 
 import pyautogui
 import pygame
@@ -127,7 +128,7 @@ def make_grid():
 		grid.append([])
 		for colNum in range(NumberOfBoxesInRow):
 			node = Node(rowNum, colNum)
-			grid[i].append(node)
+			grid[rowNum].append(node)
 	return grid
 grid = make_grid()
 
@@ -223,7 +224,9 @@ def drawPath():
     while True:
         if parent.parent == None:
             pygame.time.wait(2000)
-            exit()
+            pygame.quit()
+            sys.exit()
+            
         parent.setStatesFalse()
         parent.isPath = True
         pygame.time.wait(100)
