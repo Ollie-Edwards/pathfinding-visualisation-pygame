@@ -15,11 +15,11 @@ A* pathfinding visualisation using pygame
     pip install math
     pip install pygame
    ```
- 3. CD into the project file
-  ```sh
+3. CD into the project file
+   ```sh
    cd pathfinding-visualisation-pygame
-  ```
-  4. Run the program
+   ```
+4. Run the program
    ```sh
      python main.py
    ```
