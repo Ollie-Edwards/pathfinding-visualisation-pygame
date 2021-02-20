@@ -1,5 +1,5 @@
 # pathfinding-visualisation-pygame
-A* pathfinding visualisation using pygame
+Shows visually how the A* pathfinding algorithm works
 
 ### Prerequisites
 
